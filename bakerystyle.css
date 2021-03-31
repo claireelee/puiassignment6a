@@ -64,7 +64,6 @@ body {
 
 .navbar {
     overflow: hidden;
-    padding: 16px;
     box-sizing: border-box;
     background-color: var(--bg);
     border-top-style: none;
@@ -73,6 +72,7 @@ body {
     border-bottom-style: solid;
     border-color: var(--accent);
     font-weight: 500;
+    height: 80px;
 }
 
 .navbar .logo {
@@ -92,18 +92,53 @@ body {
     padding-right: 10px;
     padding-left: 10px;
     cursor: pointer;
+    padding-bottom: 20px;
+
+}
+
+.navbar .currentnavbutton a {
+    float: left;
+    display: block;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+    padding-bottom: 20px;
+    color: var(--accenthover);
+    font-weight:600;
+    border-bottom-width: 10px;
+    border-bottom-color: var(--accent);
+    border-bottom-style: solid;
 }
 
 .navbar .navbutton a:hover {
     color: var(--accenthover);
     font-weight:600;
-
 }
 
 .navbar .cart a {
     float: right;
     display: block;
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+
+.navbar .cart a:hover {
+    color: var(--accenthover);
+    font-weight:600;
+}
+
+.navbar .currentcart a {
+    float: right;
+    display: block;
+    padding-top: 15px;
+    padding-right: 20px;
+    color: var(--accenthover);
+    font-weight:600;
+    border-bottom-width: 10px;
+    border-bottom-color: var(--accent);
+    border-bottom-style: solid;
+    padding-bottom: 3px;
 }
 
 /*sub-navigation bar for order page*/
@@ -113,6 +148,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
     background-color: var(--accentbg);
+    height: 60px;
 }
 
 .subnavbar .navbutton a {
@@ -122,11 +158,28 @@ body {
     padding-right: 10px;
     padding-left: 10px;
     cursor: pointer;
+    padding-bottom: 13px;
 }
 
 .subnavbar .navbutton a:hover {
     font-weight: 600;
+
 }
+
+.subnavbar .currentnavbutton a {
+    font-weight: 600;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--accent);
+    border-bottom-style: solid;
+    padding-bottom: 13px;
+    float: left;
+    display: block;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
 
 /*bottom bar for cart page*/
 

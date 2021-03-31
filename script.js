@@ -1,4 +1,10 @@
-// Get the container element
+//clicking "add to cart" increases the cart count by 1 
+var j = 0;
+function addCartClick() {
+    document.getElementById('clickcount').innerHTML = "Cart" + " " + "(" + (++j) + ")";
+}
+
+// flavor container
 var flavorContainer = document.getElementById("flavorselect");
 
 // Get all buttons with class="btn" inside the container
@@ -19,9 +25,9 @@ for (var i = 0; i < flavorSelections.length; i++) {
     });
 }
 
+// glaze container
 var glazeContainer = document.getElementById("glazeselect");
 
-// Get all buttons with class="btn" inside the container
 var glazeSelections = glazeContainer.getElementsByClassName("selectionitem");
 
 for (var i = 0; i < glazeSelections.length; i++) {
@@ -39,9 +45,9 @@ for (var i = 0; i < glazeSelections.length; i++) {
     });
 }
 
+// quantity container
 var quantityContainer = document.getElementById("quantityselect");
 
-// Get all buttons with class="btn" inside the container
 var quantitySelections = quantityContainer.getElementsByClassName("selectionitem");
 
 for (var i = 0; i < quantitySelections.length; i++) {
@@ -56,19 +62,10 @@ for (var i = 0; i < quantitySelections.length; i++) {
       // Add the active class to the current/clicked button
       this.className += " active";
       document.getElementById('clickquantity').innerHTML = "Quantity: " + this.id;
+
+      //determine item subtotal by quantity
       document.getElementById('clickprice').innerHTML = "Item Subtotal: $" + this.id + ".00";
     });
 }
 
-var j = 0;
-function addCartClick() {
-    document.getElementById('clickcount').innerHTML = "Cart" + " " + "(" + (++j) + ")";
-}
 
-/*function addCartFlavor() {
-    var x = flavorContainer.getElementsByClassName("active");
-    if (x.length > 0) {
-        var flavor = x[0].id;
-        document.getElementById('clickflavor').innerHTML = "Flavor: " + flavor;
-    }
-}*/
